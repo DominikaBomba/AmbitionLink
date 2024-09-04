@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Ambition Link </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="index_style.css" type="text/css">
+	</head>
+	<body>
+		
+		<main>
+			<menu> 
+				<a href="#"> Wyszukiwarka </a>
+			</menu>
+			<header> 
+				<h1> Ambition link </h1>
+				<h3> Find your <span id="insert"></span></h3>
+			</header>
+		</main>
+		<script>
+			let array_header = ["Team", "Events", "abc"];
+			setTimeout(typeWriter, 1000);
+			function typeWriter(){
+				
+				for(let word in array_header){
+					let i = 0;
+					do{
+						
+						insert.innerHTML += array_header[word][i];
+						i++;
+					}while(i < array_header[word].length)
+					console.log(array_header[word]);
+				}
+			}
+		</script>
+	</body>
+</html>
