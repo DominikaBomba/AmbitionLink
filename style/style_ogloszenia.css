@@ -8,6 +8,7 @@
 html{
 	color: var(--dark);
 	font-family: sans-serif;
+	background-color: var(--creme);
 }
 
 nav{
@@ -62,4 +63,87 @@ nav>*{
 	padding:  5px 10px 5px 10px;
 	box-shadow: 0px 0px var(--red);
 }
+
+section{
+	width: 100%;
+height:  auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#zdjecie_lupa{
+	position: fixed;
+	top: 40vh;
+	left: calc( -1 * calc(3vh + 3vw));
+	height: calc(10vh + 10vw);
+	animation: lupa_animation linear 3s infinite;
+}
+@keyframes lupa_animation{
+	25% {
+		transform: scale(1.02);
+		transform: rotate(2deg);
+		
+	}
+	75% {transform: scale(1.02);}
+}
+.search>div{
+	width: 70%;
+	padding: 10%;
+	font-size: 200%;
+}
+.search{
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	width: 80%;
+	max-width: 1000px;
+	height: 5vh;
+	min-height: 70px;
+	margin-top: 10%;
+	margin-bottom: 10px;
+	
+	background-color: var(--creme);
+	border: 1px solid var(--dark);
+	border-radius: 40px;
+	box-shadow: 0px 10px var(--red);
+}
+.search>img{
+	height: 50%;
+	
+}
+section img{
+height: 100px;
+}
+.quote{
+	
+	height: 20vh;
+	width: 60%;
+	max-width: 800px;
+	min-width: 400px;
+	display: flex;
+	flex-direction: row;
+
+}
+.quote img:nth-of-type(1){
+	transform: rotate(180deg);
+}
+.quote img:nth-of-type(2){
+	margin-top: calc(20vh - 100px);
+}
+.quote div{
+	height: 80%;
+	font-size: 150%;
+	padding: 10% calc(1vw) 10% calc(1vw) ;
+}
+.quote img{
+	
+}
+.answer{
+	width: 80%;
+	max-width: 800px;
+	font-size: 120%;
+	margin: calc(5vh + 2vw);
 }
