@@ -6,12 +6,20 @@
    
 }
 html{
+	color: var(--red);
 	width: 100%;
 	color: var(--dark);
 	font-family: sans-serif;
 	background-color: var(--creme);
 }
-
+hr{
+	width: 100%;
+	height: 2px;
+	margin-top: 20px;
+	margin-bottom:20px;
+	color: var(--red);
+	background-color: var(--red);
+}
 nav{
 	height: 10%;
 	min-height: 80px;
@@ -88,6 +96,11 @@ height:  auto;
 	}
 	75% {transform: scale(1.02);}
 }
+.answer{
+	font-size: 200%;
+
+
+}
 .search>div{
 	width: 70%;
 	padding: 10%;
@@ -144,9 +157,11 @@ height: 100px;
 }
 .answer{
 	width: 80%;
-	max-width: 800px;
-	font-size: 120%;
+	max-width: 1000px;
+	font-size: 150%;
 	margin: calc(5vh + 2vw);
+	text-align: center;
+	padding: 10px;
 }
 /*przesuwający się baner*/
 
@@ -226,3 +241,118 @@ height: 100px;
 }
 
 
+.photo_gallery{
+	height: calc(40vh + 3vw);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.photo_gallery>img{
+	height: 70%;
+	margin: 10px;
+	transition: all 1s ease;
+	
+	
+}
+.photo_gallery>img:hover{
+	transform: scale(1.13);
+	transform: rotate(4deg);
+	
+}
+/*problemy*/
+#problemy{
+	height: 110vh;
+	width: 100%;
+	
+}
+
+#problemy img{
+	
+	border: 2px solid var(--red);
+	width: calc(20vh + 10vw);
+	height: auto;
+	animation: obrazki_animation linear 3s infinite;
+}
+@keyframes obrazki_animation{
+	25% {
+		transform: scale(1.02);
+		transform: translateX(100px);
+		transform: rotate(1deg);
+		
+	}
+	100% {transform: scale(1.00);
+		transform: translateX(0px);
+		transform: rotate(-1deg)}
+}
+
+#problemy1,#problemy3 {
+	 position: relative;
+
+		width: 40%;
+		left: 10%;
+	
+	
+}
+#problemy3{
+	left: 14%;
+}
+#problemy2{
+	position: relative;
+	width: 40%;
+	left: 60%;
+
+}
+#problemy1_opis{
+
+	position: relative;
+	width: 20%;
+	top: -20%;
+	left: 60%;
+}
+#problemy1 .problemy_description, #problemy3  .problemy_description{
+	width: 150px;
+	top:  calc(10vh + 4vw);
+   	left: calc(18vh + 10vw);
+}
+#problemy3  .problemy_description{
+	width: 260px;
+}
+#problemy1 .problemy_title, #problemy3  .problemy_title{
+	top:  calc(8vh + 3vw);
+   	left: calc(18vh + 10vw);
+}
+#problemy2 .problemy_description{
+	top:  calc(10vh + 4vw);
+   	left: calc(40% - calc(20vh + 10vw));
+}
+#problemy2 .problemy_title{
+
+	top:  calc(8vh + 3vw);
+   	left: calc(40% - calc(20vh + 10vw));
+}
+
+.problemy_description{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: var(--red);
+	position: absolute;
+	height: calc(2vh );
+	padding: 1vw 2vw 1vw 2vw;
+	font-size: 1.6vh;
+	border-radius: 30px;
+	z-index: 3;
+	color: var(--creme);
+	
+	
+}
+.problemy_title{
+	display: flex;
+
+	flex-wrap: nowrap;
+	color: var(--dark);
+	position: absolute;
+	width: 30vw;
+	font-size: 2vh;
+}
