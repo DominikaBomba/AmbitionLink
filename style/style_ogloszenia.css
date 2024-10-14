@@ -303,12 +303,29 @@ height: 100px;
 	left: 60%;
 
 }
+#problemy1_opis, #problemy2_opis, #problemy3_opis{
+	font-size: calc(0.5vh + 0.8vw);
+}
 #problemy1_opis{
 
 	position: relative;
 	width: 20%;
-	top: -20%;
+	top: -25%;
 	left: 60%;
+}
+#problemy2_opis{
+
+	position: relative;
+	width: 20%;
+	top: -20%;
+	left: 20%;
+}
+#problemy3_opis{
+
+	position: relative;
+	width: 20%;
+	top: -20%;
+	left:65%;
 }
 #problemy1 .problemy_description, #problemy3  .problemy_description{
 	width: 150px;
@@ -349,7 +366,6 @@ height: 100px;
 }
 .problemy_title{
 	display: flex;
-
 	flex-wrap: nowrap;
 	color: var(--dark);
 	position: absolute;
