@@ -8,10 +8,35 @@
 html{
 	color: var(--red);
 	width: 100%;
+	margin:0;
 	color: var(--dark);
 	font-family: sans-serif;
 	background-color: var(--creme);
 }
+/*animations*/
+@keyframes lupa_animation{
+	25% {
+		transform: scale(1.02);
+		transform: rotate(2deg);
+		
+	}
+	75% {transform: scale(1.02);}
+}
+@keyframes obrazki_animation{
+	25% {
+		transform: scale(1.02);
+		
+		transform: rotate(1deg);
+		
+	}
+	100% {transform: scale(1.00);
+		
+		transform: rotate(-1deg)}
+}
+/*css for pcs*/
+@media all and (min-width: 1200px){
+	
+
 hr{
 	width: 100%;
 	height: 2px;
@@ -88,14 +113,7 @@ height:  auto;
 	height: calc(10vh + 10vw);
 	animation: lupa_animation linear 3s infinite;
 }
-@keyframes lupa_animation{
-	25% {
-		transform: scale(1.02);
-		transform: rotate(2deg);
-		
-	}
-	75% {transform: scale(1.02);}
-}
+
 .answer{
 	font-size: 200%;
 
@@ -202,24 +220,6 @@ height: 100px;
 	animation: loop2 20s linear infinite;
 }
 
-
-@keyframes loop {
-    0% {
-		position: absolute;
-		left: 0;}
-    100% {
-		position: absolute;
-		left: -100vw;}
-}
-@keyframes loop2 {
-    0% {
-		position: absolute;
-		left: 100vw}
-    100% {
-		position: absolute;
-		left: 0;
-	}
-}
 #blocks_events img{
 	height: 15px;
 	
@@ -273,17 +273,6 @@ height: 100px;
 	width: calc(20vh + 10vw);
 	height: auto;
 	animation: obrazki_animation linear 3s infinite;
-}
-@keyframes obrazki_animation{
-	25% {
-		transform: scale(1.02);
-		transform: translateX(100px);
-		transform: rotate(1deg);
-		
-	}
-	100% {transform: scale(1.00);
-		transform: translateX(0px);
-		transform: rotate(-1deg)}
 }
 
 #problemy1,#problemy3 {
@@ -371,4 +360,286 @@ height: 100px;
 	position: absolute;
 	width: 30vw;
 	font-size: 2vh;
+}
+}
+/*css for phones and tablets*/
+@media all and (max-width: 1200px){
+	body{
+		margin: 0;
+		width: 100vw;}
+	html{
+		margin: 0;
+		width: 100vw;
+	}
+
+hr{
+	width: 100vw;
+	height: 2px;
+	margin-top: 20px;
+	margin-bottom:20px;
+	color: var(--red);
+	background-color: var(--red);
+}
+nav{
+	height: 10%;
+	min-height: 80px;
+	background-color: var(--creme);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+nav>*{
+	width: 50%;
+	height: 100%;
+}
+#short_menu{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+#short_menu a, #short_menu_zaloguj a{
+	color: var(--dark);
+	text-decoration: 	none;
+	
+}
+#short_menu_logo{
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+}
+#short_menu_logo>img{
+	height: 100px;
+}
+#short_menu_zaloguj{
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+}
+#short_menu_zaloguj a{
+	border: 2px solid var(--red);
+	border-radius: 30px;
+	font-size: 90%;
+	padding:  5px 10px 5px 10px;
+	box-shadow: 0px 5px var(--red);
+}
+#short_menu_zaloguj a:hover{
+	border: 2px solid var(--red);
+	border-radius: 30px;
+	font-size: 90%;
+	padding:  5px 10px 5px 10px;
+	box-shadow: 0px 0px var(--red);
+}
+
+section{
+	width: 100vw;
+	height:  auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#zdjecie_lupa{
+	position: fixed;
+	top: 50vh;
+	left: calc( -1 * calc(3vh + 3vw));
+	height: calc(10vh + 10vw);
+	animation: lupa_animation linear 3s infinite;
+}
+
+.answer{
+	font-size: 170%;
+
+}
+.search>div{
+	width: 80%;
+	padding: 10%;
+	font-size: 180%;
+}
+.search{
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	width: 80%;
+	max-width: 1000px;
+	height: 5vh;
+	min-height: 70px;
+	margin-top: 10%;
+	margin-bottom: 10px;
+	
+	background-color: var(--creme);
+	border: 1px solid var(--dark);
+	border-radius: 40px;
+	box-shadow: 0px 10px var(--red);
+}
+.search>img{
+	height: 50%;
+	margin-right: 10px;
+	
+}
+section img{
+height: 100px;
+}
+.quote{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	height: 20vh;
+	width: 80%;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+
+}
+.quote img:nth-of-type(1){
+	transform: rotate(180deg);
+}
+.quote img:nth-of-type(2){
+	margin-top: calc(20vh - 100px);
+}
+.quote div{
+	height: 80%;
+	font-size: 120%;
+	padding: 10% 1vw 10% 1vw ;
+}
+
+.answer{
+	width: 80%;
+	max-width: 1000px;
+	font-size: 150%;
+	margin: calc(5vh + 2vw);
+	text-align: center;
+	padding: 10px;
+}
+/*przesuwający się baner*/
+
+
+
+
+#blocks_events {
+    
+    height: calc(3vh + 2vw);
+	display: flex;
+	flex-direction: row;
+	
+	
+    font-family: Montserrat;
+    
+
+    
+
+}
+#blocks_events .scroll {
+	
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+	
+   	width: 50vw;
+    
+	
+	
+}
+#scroll_one{
+	position: absolute;
+	left: 0;
+	animation: loop 20s linear infinite;
+}
+#scroll_two{
+	position: absolute;
+	right: 0;
+	animation: loop2 20s linear infinite;
+}
+
+#blocks_events img{
+	height: 15px;
+	
+	
+}
+.item {
+	color: var(--creme);
+    display: flex;
+    align-items: center;
+    
+   margin-left: 1vw;
+    font-size: calc(0.5vh + 1vw);
+    
+    padding: 10px;
+	
+    border-radius: 0.4rem;
+    white-space: nowrap;
+   
+}
+
+
+
+.photo_gallery{
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.photo_gallery>img{
+	width: 30vw;
+	height: auto;
+	margin: 2px;
+	transition: all 1s ease;
+	
+	
+}
+.photo_gallery>img:hover{
+	transform: scale(1.13);
+	transform: rotate(4deg);
+	
+}
+/*problemy*/
+#problemy{
+	display: flex;
+	flex-wrap: wrap;
+	
+	
+	height: auto;
+	width: 100vw;
+	
+}
+	.problemy_1{
+		width: 50%;
+		margin-bottom: 5vh;
+	}
+	.problemy_opis{
+		background-color: var(--red);
+		color: var(--creme);
+		height: 20vh;
+		display: flex;
+		justify-content:  	center;
+		align-items: center;
+		border: 2px solid var(--red);
+		border-radius: 10px;
+		width: 40%;
+		padding: 20px;
+		margin-bottom: 5vh;
+	}
+
+#problemy img{
+	
+	
+	width: calc(20vh + 10vw);
+	height: auto;
+	animation: obrazki_animation linear 3s infinite;
+}
+
+	.problemy_title, .problemy_description{
+
+		text-align: center;
+		color: var(--red);
+	}
 }
